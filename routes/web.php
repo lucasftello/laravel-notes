@@ -17,9 +17,7 @@ Route::middleware([CheckIfUserIsLogged::class])->group(function () {
 
 // Protected Routes
 Route::middleware([CheckIfUserIsNotLogged::class])->group(function () {
-    Route::get('/', function () {
-        return redirect()->route('notes');
-    });
+    Route::permanentRedirect('/', '/notes');
     Route::get('/notes', [NoteController::class, 'index'])->name('notes');
 
     Route::get('/notes/create', [NoteController::class, 'createNote'])->name('note.create');
