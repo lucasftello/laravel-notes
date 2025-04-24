@@ -8,6 +8,7 @@ $ cd laravel-notes
 $ composer install
 $ cp .env.example .env
 $ php artisan key:generate
+$ php artisan session:table
 $ php artisan migrate #antes de rodar este comando verifique sua configuracao com banco em .env
 $ php artisan db:seed #para gerar os seeders, dados de teste
 $ php artisan serve
